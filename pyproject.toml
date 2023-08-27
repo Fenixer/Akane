@@ -1,0 +1,21 @@
+[project]
+requires-python = ">=3.8"
+
+[tool.ruff]
+exclude = [
+    ".git",
+    ".github",
+    ".vscode",
+    ".venv",
+    "venv"
+]
+select = ["E", "F", "B"]
+line-length = 100
+
+
+[tool.isort]
+known_third_party = ["PIL", "aiohttp_client_cache", "bs4", "dateutil", "dotenv", "fast_colorthief", "feedparser", "hikari", "isodate", "lightbulb", "miru", "pandas", "plotly", "psutil", "rapidfuzz"]
+profile= "black"
+
+[tool.black]
+target-versions = ["py38", "py39", "py310", "py311"]
